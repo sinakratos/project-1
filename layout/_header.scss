@@ -1,0 +1,29 @@
+.header {
+    height: 95vh;
+    /* The linear-gradient() function sets a linear gradient as the background image.
+    va in to right bottom dare mige tariki (por rang tar) be samt rast paiin bbr */
+    background-image: linear-gradient(
+         to right bottom,
+         rgba($color-primary-light,0.8),
+         rgba($color-primary-dark,0.8)),
+      url(../img/hero.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    position: relative;
+    /* miaim mokhtasat aks change mikonim va 4 ta moteghair midim ke mokhtasat hastn */
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%);// ino zadam error paini raft :/
+    clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%);
+ 
+    &__logo-box {
+       position: absolute;
+       top: 4rem;
+       left: 4rem;
+    }
+    &__logo {
+       height: 5rem;
+    }
+    &__logo:hover {
+       transform: skew(5deg);
+    }
+ }
